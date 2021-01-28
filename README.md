@@ -15,6 +15,6 @@ Shell script to save time when building and running docker images locally.
    - --name sets instance name to IMAGE_NAME
    - -p maps host port to container port eg 3000:8080
 
-3. Final piece of the scrip runs docker images then return third column of result then shortens to first row leaving us with just the IMAGEID of the most recently built image
+3. Final part of the script manipulates output of docker images using awk to return the third column of the result then shortens to first row leaving us with just the IMAGEID of the most recently built image
 
 ### Checked with [ShellCheck](https://github.com/koalaman/shellcheck)
