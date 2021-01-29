@@ -6,7 +6,7 @@ Shell script to save time when building and running docker images locally.
 
 `bash ../bash-practise/docker-build-and-run.sh -a IMAGE_NAME -b HOST_PORT -c CONTAINER_PORT`
 
-1. Script builds docker image using DOCKERIMAGE in current directory giving the image the title IMAGE_NAME
+1. Script builds docker image using DOCKERFILE in current directory giving the image the title IMAGE_NAME
 
 2. Script runs the image:
 
