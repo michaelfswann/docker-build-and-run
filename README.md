@@ -12,7 +12,7 @@ Shell script to save time when building and running docker images locally.
 
    - --rm flag sets cleanup
    - -it flag sets interactive and tty
-   - --name sets instance name to IMAGE_NAME
+   - --name sets container name to IMAGE_NAME
    - -p maps host port to container port eg 3000:8080
 
 3. Final part of the script manipulates output of docker images using awk to return the third column of the result then shortens to first row leaving us with just the IMAGEID of the most recently built image
