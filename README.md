@@ -21,6 +21,6 @@ Shell script to save time when building and running docker images locally.
 
 3. Final part of the script manipulates output of docker images using awk to return the third column of the result then shortens to first row leaving us with just the IMAGEID of the most recently built image:
 
-         this part => `$(docker images | awk '{print $3}' | awk 'NR==2')`
+          `docker images | awk '{print $3}' | awk 'NR==2'`
 
 ### Checked with [ShellCheck](https://github.com/koalaman/shellcheck)
