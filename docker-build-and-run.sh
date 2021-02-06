@@ -18,5 +18,5 @@ done
 # build docker image
 docker build -t "${IMAGE_NAME}" .
 
-# run container with name and ports using most recently built image in docker images
-docker run --rm -it --name "${IMAGE_NAME}" -p "${MAP_HOST_PORT}:${MAP_CONTAINER_PORT}" "$(docker images | awk '{print $3}' | awk 'NR==2')"
+# run container with name, current dir .env file and ports specified using most recently built image in docker images
+docker run --rm -it --name "${IMAGE_NAME}" --env-file ./.env -p "${MAP_HOST_PORT}:${MAP_CONTAINER_PORT}" "$(docker images | awk '{print $3}' | awk 'NR==2')"
